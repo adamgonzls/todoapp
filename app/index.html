@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Testing Browser Sync</title>
+	<title>Todo List</title>
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 	<h1>Todo List</h1>
 	
-	<button id="displayTodosButton">Display Todos</button>
-	<button id="toggleAllButton">Toggle All</button>
+	<div>
+		<button onclick="handlers.displayTodos()">Display Todos</button>
+		<button onclick="handlers.toggleAll()">Toggle All</button>
+	</div>
 
+	<div>
+		<button onclick="handlers.addTodo()">Add</button>
+		<input id="addTodoTextInput" type="text" placeholder="Buy Groceries">
+	</div>
+	
+	<div>
+		<button onclick="handlers.changeTodo()">Change Todo</button>
+		<input id="changeTodoPositionInput" type="number">
+		<input id="changeTodoTextInput" type="text">
+	</div>
 
+	<div>
+		<button onclick="handlers.deleteTodo()">Delete</button>
+		<input id="deleteTodoPositionInput" type="number">
+	</div>
 
+	<div>
+		<button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+		<input id="toggleCompletedPositionInput" type="number">
+	</div>
 
 	<script src="./js/index.js"></script>
 </body>
